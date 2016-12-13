@@ -1,0 +1,117 @@
+<html>
+<head>
+	<script src="jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="script.js"></script>
+	<style>
+		.movie { background-color: #e4e4e4; padding: 5px; outline: 2px solid black; display: none}
+		
+		.affix {
+	      	top: 0;
+          	width: 100%;
+			margin-bottom: 0px;
+	  	}
+
+	  	.affix + .container-fluid {
+	      padding-top: 70px;
+	  	}
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="190"><div class="navbar-header">
+      <a class="navbar-brand" href="#">MovieDB API</a>
+    </div>
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="#" id="topRated">Top Rated Movies</a></li>
+    <li><a href="#" id="upcoming">Upcoming Movies</a></li>
+	<li><a href="#" id="nowplaying">Now Playing</a></li>
+  </ul>
+</nav>
+<div class="container">
+<div class="row">
+	<div class="col-md-12 movie">
+		<div class="col-md-2">
+			<img class="img-thumbnail" src="http://image.tmdb.org/t/p/w185/9O7gLzmreU0nGkIB6K3BsJbzvNv.jpg"></img>
+		</div>
+		<div class="col-md-10">
+			<h1><a class="title" href="http://www.imdb.com/title/tt0111161/">The Shawshank Redemption (1994) </a> </h1>
+			<ul class="list-inline">
+				<li> 2h 22min </li>
+				<li>|</li>
+				<li>Crime,</li>
+				<li>Drama</li>
+				<li>|</li>
+				<li> 10.09.1994. </li>
+				<li>|</li>
+				<li>Rating: 8.33 <span class="glyphicon glyphicon-star" style="color:#ffcc00"> </span> - 5321 votes</li>
+			</ul>
+			<p class="text-justify" id="description">Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins 
+			a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his
+			long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red
+			-- for his integrity and unquenchable sense of hope.</p>
+			<span id="production"> Production companies: Castle Rock Entertainment </span> <br/>
+			<span id="budget">Budget: 25 000 000 </span> <br/>
+			<span id="revenue"> Revenue: 28 341 469</span> <br/>
+			<span id="tagline"> Tagline: Fear can hold you prisoner. Hope can set you free.</span> <br/>
+		</div>
+	</div>
+</div>
+<hr/>
+<div class="row">
+ <div class="col-xs-4 col-md-offset-3">
+	<input type="text" class="form-control" id="tbInput"></input> 
+ </div> 
+ <button type="submit" class="btn btn-default search">&nbsp;<span class="glyphicon glyphicon-search"></span>&nbsp;</button>
+ <button type="submit" class="btn btn-default simmilar" style="display: none">Show simmilar</span></button>
+</div>
+<hr/>
+<div class="row">
+	<div class="col-md-12 text-center">
+		<h2 class="naslov">Top Rated Movies</h2>
+	</div>
+</div>
+<hr/>
+<div class="row posters">
+	<div class="col-md-3">
+		<img class="img-thumbnail" title="The Shawshank Redemption"  id="278" src="http://image.tmdb.org/t/p/w300/9O7gLzmreU0nGkIB6K3BsJbzvNv.jpg"></img>
+	</div>
+	<div class="col-md-3">
+		<img class="img-thumbnail" title="Movie Title" id="123" src="http://image.tmdb.org/t/p/w300/d4KNaTrltq6bpkFS01pYtyXa09m.jpg"></img>
+	</div>
+	<div class="col-md-3">
+		<img class="img-thumbnail" title="Movie Title" id="123" src="http://image.tmdb.org/t/p/w300/lIv1QinFqz4dlp5U4lQ6HaiskOZ.jpg"></img>
+	</div>
+	<div class="col-md-3">
+		<img class="img-thumbnail" title="Movie Title" id="123" src="http://image.tmdb.org/t/p/w300/ynXoOxmDHNQ4UAy0oU6avW71HVW.jpg"></img>
+	</div>
+	<br/>
+	<div class="col-md-3">
+		<img class="img-thumbnail" title="Movie Title" id="123" src="http://image.tmdb.org/t/p/w300/nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg"></img>
+	</div>
+	<div class="col-md-3">
+		<img class="img-thumbnail" title="Movie Title"id="123" src="http://image.tmdb.org/t/p/w300/yPisjyLweCl1tbgwgtzBCNCBle.jpg"></img>
+	</div>
+	<div class="col-md-3">
+		<img class="img-thumbnail" title="Movie Title" id="123" src="http://image.tmdb.org/t/p/w300/tHbMIIF51rguMNSastqoQwR0sBs.jpg"></img>
+	</div>
+	<div class="col-md-3">
+		<img class="img-thumbnail" title="Movie Title" id="123" src="http://image.tmdb.org/t/p/w300/4mFsNQwbD0F237Tx7gAPotd0nbJ.jpg"></img>
+	</div>
+	
+</div>
+<hr/>
+<div class="col-md-12 text-center">
+<ul class="pagination">
+  <li class="active"><a href="#" title="1">1</a></li>
+  <li><a href="#" title="2">2</a></li>
+  <li><a href="#" title="3">3</a></li>
+  <li><a href="#" title="4">4</a></li>
+  <li><a href="#" title="5">5</a></li>
+  <li><a href="#" title="6">&gt;&gt;</a></li>
+</ul>
+</div>
+<br/>
+</div>
+</body>
+</html>
